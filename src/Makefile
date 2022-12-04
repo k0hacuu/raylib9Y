@@ -26,10 +26,10 @@
 # Define required environment variables
 #------------------------------------------------------------------------------------------------
 # Define target platform: PLATFORM_DESKTOP, PLATFORM_RPI, PLATFORM_DRM, PLATFORM_ANDROID, PLATFORM_WEB
-PLATFORM              ?= PLATFORM_DESKTOP
+PLATFORM              ?= PLATFORM_WEB
 
 # Define project variables
-PROJECT_NAME          ?= raylib_game
+PROJECT_NAME          ?= rooted_expectations
 PROJECT_VERSION       ?= 1.0
 PROJECT_BUILD_PATH    ?= .
 
@@ -373,12 +373,7 @@ endif
 # Define source code object files required
 #------------------------------------------------------------------------------------------------
 PROJECT_SOURCE_FILES ?= \
-    raylib_game.c \
-    screen_logo.c \
-    screen_title.c \
-    screen_options.c \
-    screen_gameplay.c \
-    screen_ending.c
+    raylib_game.cpp
 
 # Define all object files from source files
 OBJS = $(patsubst %.c, %.o, $(PROJECT_SOURCE_FILES))
